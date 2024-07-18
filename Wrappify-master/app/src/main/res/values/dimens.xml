@@ -1,0 +1,12 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="textTitle">35dp</dimen>
+    <dimen name="textWordToBeGuessed">30dp</dimen>
+    <dimen name="buttonReset">20dp</dimen>
+    <dimen name="textLettersTried">20dp</dimen>
+    <dimen name="editInput">20dp</dimen>
+    <dimen name="textTriesLeft">25dp</dimen>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
+</resources>

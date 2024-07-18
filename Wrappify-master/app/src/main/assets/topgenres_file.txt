@@ -1,0 +1,13 @@
+alternative
+hiphop
+rock
+pop
+kpop
+indie
+acoustic
+blues
+country
+jazz
+metal
+gospel
+electronic

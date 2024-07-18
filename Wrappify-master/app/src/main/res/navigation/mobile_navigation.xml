@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.wrappify.ui.wrapped.WrappedGenerator"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_wrapped">
+        <action
+            android:id="@+id/wrappedGenerator_to_wrappedView"
+            app:destination="@id/wrapped_viewer" />
+        <action
+            android:id="@+id/wrappedGenerator_to_wrappedSummary"
+            app:destination="@id/wrapped_summary" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_dashboard"
+        android:name="com.example.wrappify.ui.dashboard.DashboardFragment"
+        android:label="@string/title_dashboard"
+        tools:layout="@layout/fragment_dashboard">
+    <action
+        android:id="@+id/dashboardFragment_to_topArtistsFragment"
+        app:destination="@id/navigation_top_artists" />
+    <action
+        android:id="@+id/dashboardFragment_to_topSongsFragment"
+        app:destination="@id/navigation_top_songs" />
+</fragment>
+
+    <fragment
+        android:id="@+id/navigation_notifications"
+        android:name="com.example.wrappify.ui.notifications.NotificationsFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_notifications" />
+
+    <fragment
+        android:id="@+id/navigation_top_artists"
+        android:name="com.example.wrappify.ui.dashboard.TopArtists"
+        android:label="@string/title_top_artists"
+        tools:layout="@layout/fragment_top_artists" >
+    <action
+        android:id="@+id/dashboardFragment_to_topArtistsFragment"
+        app:destination="@id/navigation_dashboard" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_top_songs"
+        android:name="com.example.wrappify.ui.dashboard.TopSongs"
+        android:label="@string/title_top_songs"
+        tools:layout="@layout/fragment_top_songs">
+    <action
+        android:id="@+id/dashboardFragment_to_topSongsFragment"
+        app:destination="@id/navigation_dashboard" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/wrapped_viewer"
+        android:name="com.example.wrappify.ui.wrapped.WrappedViewer"
+        tools:layout="@layout/fragment_wrapped_viewer">
+        <action
+            android:id="@+id/wrappedView_to_wrappedGenerator"
+            app:destination="@id/navigation_home" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/wrapped_summary"
+        android:name="com.example.wrappify.ui.wrapped.WrappedSummary"
+        tools:layout="@layout/fragment_wrapped_summary">
+        <action
+            android:id="@+id/wrappedSummary_to_wrappedGenerator"
+            app:destination="@id/navigation_home" />
+    </fragment>
+
+
+</navigation>
